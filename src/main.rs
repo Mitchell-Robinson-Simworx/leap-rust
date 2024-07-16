@@ -11,7 +11,7 @@ struct Cli {
 fn main() {
     let args = Cli::parse();
 
-    if (args.year % 4 == 0 && args.year % 100 != 0 || args.year % 400 == 0) {
+    if args.year % 4 == 0 && args.year % 100 != 0 || args.year % 400 == 0 {
         println!("The year {} is a leap year", args.year);
     } else {
         println!("The year {} is not a leap year", args.year);
